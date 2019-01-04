@@ -21,7 +21,7 @@ git commit -m "$msg"
 
 # Push source and build repos.
 
-git push "https://${TOKEN}@fernandoguedes.github.io" master > /dev/null 2>&1
+git push "https://$TOKEN@fernandoguedes.github.io" master > /dev/null 2>&1
 
 # Come Back up to the Project Root
 cd ..
