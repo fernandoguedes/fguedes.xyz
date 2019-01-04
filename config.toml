@@ -4,7 +4,7 @@ theme = "ghostwriter"
 languageCode = "en-us"
 copyright = "Luís Fernando Guedes"
 #googleAnalytics = "XXX"
-#disqusShortname = "XXX"
+disqusShortname = "fguedes"
 
 [Author]
     name = "Luís Fernando Guedes"
