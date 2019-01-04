@@ -1,0 +1,4 @@
+[submodule "public"]
+	path = public
+	url = https://$TOKEN@github.com/fernandoguedes/fernandoguedes.github.io.git
+	branch = master
