@@ -2,10 +2,6 @@
 
 echo -e "\033[0;32mDeploying updates to GitHub...\033[0m"
 
-rm -rf public/
-
-git submodule add -b master git@github.com:fernandoguedes/fernandoguedes.github.io.git public
-
 # Build the project.
 hugo # if using a theme, replace with `hugo -t <YOURTHEME>`
 
@@ -23,7 +19,7 @@ git commit -m "$msg"
 
 # Push source and build repos.
 
-git push "https://$TOKEN@fernandoguedes.github.io" master > /dev/null 2>&1
+git push origin master > /dev/null 2>&1
 
 # Come Back up to the Project Root
 cd ..
