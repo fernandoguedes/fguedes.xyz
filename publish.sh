@@ -2,6 +2,8 @@
 
 echo -e "\033[0;32mDeploying updates to GitHub...\033[0m"
 
+rm -rf public/
+
 git submodule add -b master git@github.com:fernandoguedes/fernandoguedes.github.io.git public
 
 # Build the project.
