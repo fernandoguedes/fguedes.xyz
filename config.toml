@@ -1,4 +1,4 @@
-baseurl = "http://fguedes.me"
+baseurl = "https://fguedes.me/"
 title = "~fguedes 🕱"
 theme = "ghostwriter"
 languageCode = "en-us"
@@ -16,7 +16,7 @@ copyright = "Luís Fernando Guedes"
 [Params]
     intro = true
     headline = "Luís Fernando Guedes"
-    description = "Software Engineer"
+    description = "Software Engineer and DevOps"
     github = "https://github.com/fernandoguedes"
     gitlab = "https://gitlab.com/fguedes"
     linkedin = "https://linkedin.com/in/lfernandoguedes/"
