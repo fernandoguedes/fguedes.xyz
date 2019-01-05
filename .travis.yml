@@ -10,4 +10,6 @@ install:
 
 # script - run the build script
 script:
+    - rm -rf public
+    - git submodule add -b master https://$TOKEN@github.com/fernandoguedes/fernandoguedes.github.io.git public
     - bash publish.sh
