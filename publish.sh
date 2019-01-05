@@ -19,7 +19,7 @@ git commit -m "$msg"
 
 # Push source and build repos.
 
-git push origin master > /dev/null 2>&1
+git push origin master
 
 # Come Back up to the Project Root
 cd ..
