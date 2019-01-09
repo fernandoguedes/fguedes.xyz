@@ -30,6 +30,8 @@ disqusShortname = "fguedes"
     dateFormat = "Jan 2, 2006"
     highlightJsUrl = ""
     highlightJsLocalUrl = ""
+    readingTime = true
+    readingTimeText = "Estimated reading time:"
 
 [Permalinks]
     post = "/:year/:month/:day/:filename/"
