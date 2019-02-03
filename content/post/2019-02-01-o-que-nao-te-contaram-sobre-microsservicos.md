@@ -14,8 +14,8 @@ author: Luís Fernando Guedes
 url: /2019/02/01/o-que-nao-te-contaram-sobre-microsservico/
 ---
 
-Antes de continuar saiba: é apenas mais outro post sobre microsserviço e é mais
-um lembrete do que um aviso ;)
+> Antes de continuar saiba: é apenas mais outro post sobre microsserviço e é mais
+um lembrete do que um aviso. E ah, talvez vocẽ encontre coisas óbvias.
 
 Sempre que leio algo ou assisto palestras acerca do assunto, poucas vezes pontuam os problemas que você ganha - sim, pois não tinha - ao utilizar microsserviços.
 
@@ -23,7 +23,7 @@ Sempre que leio algo ou assisto palestras acerca do assunto, poucas vezes pontua
 
 Depois de ler [esse artigo](http://blog.geekhunter.com.br/arquitetura-de-microsservicos-x-arquitetura-monolitica/) fiquei um pouco incomodado com a glamourização que se cria não só em torno do assunto como também do tal chamado "hype" nos setores e comunidades de tecnologia.
 
-Por participar ativamente da comunidade JavaScript, sei que esses "problemas"
+Por participar ativamente da comunidade JavaScript sei que esses "problemas"
 são constantes nessa comunidade. Recorrência sobre: "o framework que eu uso é
 melhor que o seu", ou, a um tempo atrás quando me indagaram "nossa, você ainda não usa isso?", se referindo ao fato de eu não
 usar [yarn](https://yarnpkg.com/en/), na época uma ferramenta recém lançada. Aliás, considerando o fato do [bash](https://en.wikipedia.org/wiki/Bash_(Unix_shell)) ser de 1989,
@@ -33,19 +33,17 @@ sim, ainda é uma ferramenta recente, mas isso é assunto pra outro post.
 
 Microsserviços te ajudam a economizar com infraestrutura? Sim. Microsserviços
 tornam o processo de desenvolvimento e distribuição mais complexo? Sim.
-Microsserviços melhoram a manutenabilidade da(s) sua(s) aplicação(ões)? Sim. Microsserviços
+Microsserviços melhoram a manutenabilidade das suas aplicações? Sim. Microsserviços
 dificultam achar com maior rapidez o ponto certo de um erro na sua _stack_? Sim.
 
 São muitas as perguntas. As respostas podem ser negativas ou
 positivas e que para serem respondidas dependem do contexto passado, presente e futuro que você, sua equipe e
 sua empresa definem. A análise, o diálogo e a troca de experiências com outras
-empresas e pessoas é essencial para obter ~~tentar~~ sucesso.
-
-> Não vá para microsserviços só por ir, por **"hype"**. Definitivamente, não faça isso!
+empresas e pessoas é essencial para ~~tentar~~ obter sucesso.
 
 Não vá para microsserviços só por ir, por **"hype"**. Definitivamente, não faça isso! Porém, como dizia um palestrante falando sobre microsserviços uma vez: "apesar dos *cases* de sucessos da Netflix e AWS, lembre-se: você não é Netflix e nem AWS!".
 Isso é algo que concordo em parte, você não pode simplesmente comparar de forma
-crua. Provavelmente o seu serviço não tem [118,9 milhões de assinantes](https://www1.folha.uol.com.br/mercado/2018/04/netflix-atinge-1189-milhoes-de-assinantes.shtml), mas pode ter 1 milhão de acessos únicos mensais, o que torna a ideia de evoluir a arquitetura um pouco mais palpável. Talvez ir para microsserviços seja a melhor saída mas saiba dos encalços antes de escolher e aplicar essa arquitetura.
+crua. Provavelmente o seu serviço não tem [118,9 milhões de assinantes](https://www1.folha.uol.com.br/mercado/2018/04/netflix-atinge-1189-milhoes-de-assinantes.shtml) e nem é responsável por [15% do tráfego mundial da internet](http://fortune.com/2018/10/02/netflix-consumes-15-percent-of-global-internet-bandwidth/), mas pode ter 1 milhão de acessos únicos mensais ou ter que operar com uma massa de dados muito grande, o que torna a ideia de evoluir a arquitetura mais palpável. Talvez ir para microsserviços seja a melhor saída mas saiba dos encalços antes de escolher e aplicar essa arquitetura.
 
 Quando você e sua equipe resolverem seguir por esse caminho não será fácil, na
 verdade será bem difícil, e apesar de - talvez - vocês se livrarem de alguns
@@ -69,7 +67,7 @@ de novas _features_.
 
 ## Pontos de Atenção
 
-- É muito legal você poder utilizar recursos em diferentes linguagens para resolver problemas específicos, porém, antes de adotar essa arquitetura que envolve multilinguagens, tenha certeza que sua equipe está preparada e nivelada para dar manutenção e criar serviços nessas linguagens. Isso pode evitar que haja sobrecarga sobre algum membro.
+- É muito legal você poder utilizar recursos em diferentes linguagens para resolver problemas específicos, porém, antes de adotar essa arquitetura que envolva multilinguagens, tenha certeza que sua equipe está preparada e nivelada para dar manutenção e criar serviços nessas linguagens. Isso pode evitar que haja sobrecarga sobre algum membro.
 
 - Outro problema recorrente é a complexidade para *debuggar* processos que envolvam
 mais de uma aplicação.
@@ -87,7 +85,7 @@ processo de integração e deploy.
 microsserviços. Se utiliza microfrontends e/ou biblioteca própria de
 componentes, **faça** testes end-to-end.
 
-- Defina entre equipe coisas básicas, como por exemplo, como funcionará nomenclatura de rotas. Use referências.
+- Defina entre a equipe coisas básicas, como por exemplo, como funcionará nomenclatura de rotas. Use referências.
 
 - Se utiliza _Docker_ como ferramenta de container, recomendo o [docker-compose](https://docs.docker.com/compose/) para "orquestrar" a estrutura de serviços localmente.
 
@@ -110,5 +108,5 @@ do que antes, **reavalie a necessidade**.
 
 Quando você tem várias etapas e serviços e é preciso criar estimativas, o
 processo acaba ficando um pouco mais difícil. Pode ser que hajam erros, porém,
-como ciclo base do _scrum_, faça sempre as _reviews_ para analisar onde houve o
+como ciclo base do _scrum_, faça sempre as _reviews_ evidenciando onde houve o
 erro para tentar não repeti-los na próxima sprint.
