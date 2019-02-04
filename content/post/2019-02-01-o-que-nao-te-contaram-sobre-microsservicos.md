@@ -15,6 +15,8 @@ author: Luís Fernando Guedes
 url: /2019/02/04/o-que-nao-te-contaram-sobre-microsservicos/
 ---
 
+![Pipelines](/microservices/trainyard.jpg)
+
 > Antes de continuar saiba: é apenas mais outro post sobre microsserviço e é mais
 um lembrete do que um aviso. E ah, talvez vocẽ encontre coisas óbvias.
 
