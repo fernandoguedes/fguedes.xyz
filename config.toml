@@ -3,7 +3,7 @@ title = "~fguedes 🕱"
 theme = "ghostwriter"
 languageCode = "en-us"
 copyright = "Luís Fernando Guedes"
-#googleAnalytics = "XXX"
+googleAnalytics = "UA-133737351-1"
 disqusShortname = "fguedes"
 
 [Author]
@@ -16,7 +16,7 @@ disqusShortname = "fguedes"
 [Params]
     intro = true
     headline = "Luís Fernando Guedes"
-    description = "Software Engineer and DevOps"
+    description = "Software Engineer with SysAdmin background"
     github = "https://github.com/fernandoguedes"
     gitlab = "https://gitlab.com/fguedes"
     linkedin = "https://linkedin.com/in/lfernandoguedes/"
