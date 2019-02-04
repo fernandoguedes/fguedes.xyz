@@ -18,7 +18,7 @@ url: /2019/02/04/o-que-nao-te-contaram-sobre-microsservicos/
 ![Pipelines](/microservices/trainyard.jpg)
 
 > Antes de continuar saiba: é apenas mais outro post sobre microsserviço e é mais
-um lembrete do que um aviso. E ah, talvez vocẽ encontre coisas óbvias.
+um lembrete do que um aviso. E ah, talvez você encontre coisas óbvias.
 
 Sempre que leio algo ou assisto palestras acerca do assunto, poucas vezes pontuam os problemas que você ganha - sim, pois não tinha - ao utilizar microsserviços.
 
