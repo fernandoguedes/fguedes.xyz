@@ -51,7 +51,7 @@ disqusShortname = "fguedes"
 #    url = "/page/contact/"
 #    weight = 3
 #
-[[menu.main]]
-    name = "About"
-    url = "/page/about/"
-    weight = 4
+#[[menu.main]]
+#    name = "About"
+#    url = "/page/about/"
+#    weight = 4
