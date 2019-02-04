@@ -2,16 +2,17 @@
 categories:
 - Microsserviços
 - Opinião
-date: 2019-02-01
+date: 2019-02-04
 published: true
 status: publish
 tags:
 - hype
 - microsserviços
+- opinião
 title: 'O que não te contaram sobre microsserviços'
 type: post
 author: Luís Fernando Guedes
-url: /2019/02/01/o-que-nao-te-contaram-sobre-microsservico/
+url: /2019/02/04/o-que-nao-te-contaram-sobre-microsservico/
 ---
 
 > Antes de continuar saiba: é apenas mais outro post sobre microsserviço e é mais
@@ -21,13 +22,13 @@ Sempre que leio algo ou assisto palestras acerca do assunto, poucas vezes pontua
 
 ## Inspiração
 
-Depois de ler [esse artigo](http://blog.geekhunter.com.br/arquitetura-de-microsservicos-x-arquitetura-monolitica/) fiquei um pouco incomodado com a glamourização que se cria não só em torno do assunto como também do tal chamado "hype" nos setores e comunidades de tecnologia.
+Uma coisa que sempre me incomodou foi a a _"glamourização"_ que se cria não só em torno do assunto como também do tal chamado "hype" nos setores e comunidades de tecnologia.
 
 Por participar ativamente da comunidade JavaScript sei que esses "problemas"
-são constantes nessa comunidade. Recorrência sobre: "o framework que eu uso é
+são constantes nesse meio. Recorrência sobre: "o framework que eu uso é
 melhor que o seu", ou, a um tempo atrás quando me indagaram "nossa, você ainda não usa isso?", se referindo ao fato de eu não
 usar [yarn](https://yarnpkg.com/en/), na época uma ferramenta recém lançada. Aliás, considerando o fato do [bash](https://en.wikipedia.org/wiki/Bash_(Unix_shell)) ser de 1989,
-sim, ainda é uma ferramenta recente, mas isso é assunto pra outro post.
+sim, o yarn ainda é algo recente, mas isso é assunto pra outro post.
 
 ## Desmitificando Microsserviços
 
@@ -41,12 +42,14 @@ positivas e que para serem respondidas dependem do contexto passado, presente e 
 sua empresa definem. A análise, o diálogo e a troca de experiências com outras
 empresas e pessoas é essencial para ~~tentar~~ obter sucesso.
 
-Não vá para microsserviços só por ir, por **"hype"**. Definitivamente, não faça isso! Porém, como dizia um palestrante falando sobre microsserviços uma vez: "apesar dos *cases* de sucessos da Netflix e AWS, lembre-se: você não é Netflix e nem AWS!".
+> Sei que parece óbvio, mas: não vá para microsserviços só por ir, por **"hype"**. Definitivamente, não faça isso!
+
+Porém, como dizia um palestrante falando sobre microsserviços uma vez: "apesar dos *cases* de sucessos da Netflix e AWS, lembre-se: você não é Netflix e nem AWS!".
 Isso é algo que concordo em parte, você não pode simplesmente comparar de forma
-crua. Provavelmente o seu serviço não tem [118,9 milhões de assinantes](https://www1.folha.uol.com.br/mercado/2018/04/netflix-atinge-1189-milhoes-de-assinantes.shtml) e nem é responsável por [15% do tráfego mundial da internet](http://fortune.com/2018/10/02/netflix-consumes-15-percent-of-global-internet-bandwidth/), mas pode ter 1 milhão de acessos únicos mensais ou ter que operar com uma massa de dados muito grande, o que torna a ideia de evoluir a arquitetura mais palpável. Talvez ir para microsserviços seja a melhor saída mas saiba dos encalços antes de escolher e aplicar essa arquitetura.
+crua. Provavelmente o seu serviço não tem [118,9 milhões de assinantes](https://www1.folha.uol.com.br/mercado/2018/04/netflix-atinge-1189-milhoes-de-assinantes.shtml) e nem é responsável por [15% do tráfego mundial da internet](http://fortune.com/2018/10/02/netflix-consumes-15-percent-of-global-internet-bandwidth/), mas pode ter 1 milhão de acessos únicos mensais ou ter que operar com uma massa de dados muito grande, o que torna a ideia de evoluir a arquitetura mais palpável. Talvez ir para microsserviços seja a melhor saída mas saiba das dificuldades antes de escolher e aplicar essa arquitetura.
 
 Quando você e sua equipe resolverem seguir por esse caminho não será fácil, na
-verdade será bem difícil, e apesar de - talvez - vocês se livrarem de alguns
+verdade será bem difícil, e apesar de ~~talvez~~ vocês se livrarem de alguns
 problemas, ganharão outros, por isso reforço: pense, troque experiências, desenhe, arquitete antes de
 tomar qualquer decisão.
 
@@ -59,10 +62,10 @@ possível alocá-lo junto com os nossos outros serviços em uma estrutura com re
 
 A "dor" veio e tivemos que tomar uma decisão naquele momento. Em seguida, devido
 ao sucesso, com mais experiência e segurança no que estávamos fazendo, começamos
-a distribuir responsabilidades desse serviço em outros utilizando [nginx](https://www.nginx.com/) para fazer o roteamento.
+a distribuir responsabilidades desse serviço em outros utilizando [nginx](https://www.nginx.com/) para fazer o roteamento progressivo.
 
 Fomos fazendo a distribuição aos poucos, movendo rota a rota, funcionalidade a
-funcionalidade, porque afinal também temos que paralelizar a migração a entrega
+funcionalidade, porque também teríamos que paralelizar migração e entrega
 de novas _features_.
 
 ## Pontos de Atenção
@@ -109,4 +112,7 @@ do que antes, **reavalie a necessidade**.
 Quando você tem várias etapas e serviços e é preciso criar estimativas, o
 processo acaba ficando um pouco mais difícil. Pode ser que hajam erros, porém,
 como ciclo base do _scrum_, faça sempre as _reviews_ evidenciando onde houve o
-erro para tentar não repeti-los na próxima sprint.
+erro.
+
+Começamos a experimentar recentemente o mapeamento de aplicações x impacto, em
+um primeiro momento nos ajudou a visualizar o todo.
