@@ -12,7 +12,7 @@ tags:
 title: 'O que não te contaram sobre microsserviços'
 type: post
 author: Luís Fernando Guedes
-url: /2019/02/04/o-que-nao-te-contaram-sobre-microsservico/
+url: /2019/02/04/o-que-nao-te-contaram-sobre-microsservicos/
 ---
 
 > Antes de continuar saiba: é apenas mais outro post sobre microsserviço e é mais
