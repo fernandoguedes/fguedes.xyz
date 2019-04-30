@@ -20,14 +20,14 @@ Tampouco conhecimento <br>
 Mesmo assim "vamo" nesse alento
 
 Tudo começou em outubro, decidimos nos aventurar <br>
-Nordeste de ponta a ponta, do Maranhão a Bahia "vamo rumar"! <br>
+Nordeste de ponta a ponta, do Maranhão a Bahia: "vamo rumar"! <br>
 Eu e a minha companheira "arrumamo" as trouxinha <br>
 Partiu conhecer os brasis e a visão mudar
 
 E assim vou falando de uma viagem inesquecível <br>
-Cheio de cultura, gente trabalhadora e do bem <br>
+Cheia de cultura, gente trabalhadora e do bem <br>
 Muita água, muito sal, muito barro e perrengue também <br>
-Carne do sol, manteiga da terra e macaxeira
+Carne do sol, manteiga da terra e macaxeira, eita comida incrível
 
 Começou no Maranhão, terra de constrastes <br>
 Entre a floresta amazônica e o sertão <br>
@@ -57,7 +57,7 @@ Com aquilo que um dia meus olhos abrilhantou
 Partiu João Pessoa, assistir Los Hermanos <br>
 Antes vamos ali no Mirante dos Golfinhos, opa, "tão dormindinhos" <br>
 Depois, show massa que me alegrou e emocionou <br>
-No outro dia "Coqueirinho", beleza ímpar, muito belo, "ô"
+No outro dia "Coqueirinho", beleza ímpar, muito belo, mar azulzinho
 
 Vamo pra Pipa? Agora! <br>
 Para o Rio Grande (do Norte) voltamos <br>
@@ -67,22 +67,22 @@ Mas o preço é pra gringo, melhor tomar cuidado
 Pernambuco, aí vamos nós! <br>
 Caos como cartão de visita <br>
 Chico Science nunca esteve tão certo <br>
-"Ó Linda" que ladeirinhas "duzinferno"
+"Ó Linda", que ladeirinhas "duzinferno"
 
 Marco Zero, Rua da Moeda <br>
 A estátua do meu ídolo ali estava <br>
 Entre o caos e o mangue <br>
-O retrato de "Manguetown"
+O retrato de "Manguetown" se apresentava
 
 Porto de Galinhas? Pronto! <br>
 "Oxe" que mar calminho <br>
-Pegar sol, relaxar e sentir o sal <br>
+Pegar sol, relaxar, sentir o sal, comer um peixinho<br>
 Lugar pra bebericar e ficar tranquilo
 
-Maceió, cidade bonita bem estruturada <br>
+Maceió, cidade bonita e bem estruturada <br>
 Praia do Francês, do Gunga <br>
 Ficar na água de "bubuia", frente aos corais <br>
-Lindo, parece não ter igual
+Lindo, parece não ter igual, água que abunda
 
 Eita! Aracaju? Já?! <br>
 Cidade pacata, trajeto pros cânions do "Velho Chico" <br>
@@ -104,12 +104,14 @@ Cerveja e churrasquinho barato <br>
 Quem eu vejo? Washington <br>
 Amistoso com todos, realmente um compadre
 
-Chegou ao fim então nossa aventura <br>
+Chegou ao fim então, nossa aventura <br>
 Enfim vamos matar a saudade dos nossos "cão" <br>
 Feijão e pipoca: "cheguemo"! <br>
 Obrigado "Seu Zé" pela horta e por cuidar tão bem do nosso chão.
 
 -
+
+Minha companheira Natália também contribuiu com o cordel, obrigado! <3
 
 Em breve pretendo escrever e publicar mais alguns textos dando dicas e compartilhando experiências
 sobre os lugares que passamos. Fiquem com essa vista de Jaboatão dos Guararapes
