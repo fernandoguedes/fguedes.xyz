@@ -11,7 +11,7 @@ tags:
 title: 'Nordeste: Uma viagem entre os Brasis (cordel)'
 type: post
 author: Luís Fernando Guedes
-url: /2019/04/30/cordel-breve-nordeste/
+url: /2019/04/30/nordeste-uma-viagem-entre-os-brasis/
 ---
 
 Eu queria fazer um cordel <br>
