@@ -1,7 +1,7 @@
 ---
 categories:
 - Serverless
-date: 2020-22-01
+date: 2020-01-22
 published: true
 status: publish
 tags:
@@ -11,7 +11,7 @@ tags:
 title: 'Introdução a Google Cloud Functions e Arquiteturas Serverless'
 type: post
 author: Luís Fernando Guedes
-url: /2020/22/01/introducao-google-cloud-functions-e-serverless/
+url: /2020/01/22/introducao-google-cloud-functions-e-serverless/
 ---
 
 Antes, gostaria de contextualizar um pouco sobre essas duas coisas: **Serverless** e **Functions**.
