@@ -1,9 +1,11 @@
 language: go
 
+go:
+  - 1.12.5
+
 # before_install
 # install - install any dependencies required
 install:
-  # - go get github.com/gohugoio/hugo
   go get https://github.com/gohugoio/hugo
 
 # script - run the build script
