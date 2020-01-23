@@ -1,7 +1,7 @@
 language: go
 
-python:
-    - master
+go:
+    - 1.11
 
 # before_install
 # install - install any dependencies required
