@@ -3,7 +3,8 @@ language: go
 # before_install
 # install - install any dependencies required
 install:
-    - go get github.com/gohugoio/hugo
+  # - go get github.com/gohugoio/hugo
+  go get https://github.com/gohugoio/hugo
 
 # script - run the build script
 script:
