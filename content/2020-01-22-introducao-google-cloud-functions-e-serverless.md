@@ -16,6 +16,7 @@ url: /2020/01/22/introducao-google-cloud-functions-e-serverless/
 
 Antes, gostaria de contextualizar um pouco sobre essas duas coisas: **Serverless** e **Functions**.
 
+![Faas na Google CLoud](/cloud-functions/faas.png)
 
 # Sobre Serverless e Functions
 
