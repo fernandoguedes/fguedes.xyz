@@ -5,11 +5,12 @@ go:
 
 # before_install
 # install - install any dependencies required
-install:
-  go get github.com/gohugoio/hugo
+#install:
+#  go get github.com/gohugoio/hugo
 
 # script - run the build script
 script:
+    - sudo apt install hugo -y
     - rm -rf public
     - git submodule add -b master https://$TOKEN@github.com/fernandoguedes/fernandoguedes.github.io.git public
     - bash publish.sh
