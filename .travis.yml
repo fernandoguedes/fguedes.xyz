@@ -3,14 +3,15 @@ language: go
 go:
   - 1.12.5
 
-# before_install
+before_install
+    - sudo apt update 
+    - sudo apt install hugo -y
 # install - install any dependencies required
 #install:
 #  go get github.com/gohugoio/hugo
 
 # script - run the build script
 script:
-    - sudo apt install hugo -y
     - rm -rf public
     - git submodule add -b master https://$TOKEN@github.com/fernandoguedes/fernandoguedes.github.io.git public
     - bash publish.sh
