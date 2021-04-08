@@ -12,7 +12,7 @@ jobs:
       - name: Install
         run: wget -O hugo https://github.com/gohugoio/hugo/releases/download/v0.82.0/hugo_extended_0.82.0_Linux-64bit.tar.gz && tar -zxvf hugo
       - name: Build 
-        run:  ./hugo
+        run:  ./hugo && cp CNAME public/CNAME
       - name: Push
         id: push_directory
         uses: cpina/github-action-push-to-another-repository@cp_instead_of_deleting
@@ -24,5 +24,6 @@ jobs:
           destination-repository-name: 'fernandoguedes.github.io'
           user-email: lfernandoguedes@gmail.com 
           commit-message: See ORIGIN_COMMIT
+          target-branch: main
       - name: Test get variable exported by push-to-another-repository
         run: echo $DESTINATION_CLONED_DIRECTORY
