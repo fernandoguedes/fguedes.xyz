@@ -89,7 +89,7 @@ $ gcloud functions deploy helloFunctions --runtime nodejs8 --trigger-http
 Caso ocorra sucesso ele retornará algumas informações, e entre elas a url onde a função está publicada e acessível. Viu como é simples?
 
 ```
-$ curl "https://us-central1-lfernandoguedes.cloudfunctions.net/helloFunctions?url=https://fguedes.me"
+$ curl "https://us-central1-lfernandoguedes.cloudfunctions.net/helloFunctions?url=https://fguedes.xyz"
 {"title":"~fguedes 🕱 · Luís Fernando Guedes"}
 ```
 
