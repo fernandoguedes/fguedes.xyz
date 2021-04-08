@@ -1,0 +1,29 @@
+name: CI
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  build:
+    runs-on: alpine 
+    steps:
+      - uses: actions/checkout@v2
+      - name: Install
+        run:  wget -O hugo https://github.com/gohugoio/hugo/releases/download/v0.82.0/hugo_extended_0.82.0_Linux-64bit.tar.gz
+        run: tar -zxvf hugo && cp hugo/hugo /usr/bin/hugo 
+      - name: Build 
+        run:  hugo
+      - name: Push
+        id: push_directory
+        uses: cpina/github-action-push-to-another-repository@cp_instead_of_deleting
+        env:
+          API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
+        with:
+          source-directory: 'public'
+          destination-github-username: 'fernandoguedes'
+          destination-repository-name: 'fernandoguedes.github.io'
+          user-email: lfernandoguedes@gmail.com 
+          commit-message: See ORIGIN_COMMIT
+      - name: Test get variable exported by push-to-another-repository
+        run: echo $DESTINATION_CLONED_DIRECTORY
