@@ -111,8 +111,6 @@ Obrigado "Seu Zé" pela horta e por cuidar tão bem do nosso chão.
 
 ---
 
-Minha companheira Natália também contribuiu com o cordel, obrigado! <3  
-
 Em breve pretendo escrever e publicar mais alguns textos dando dicas e compartilhando experiências
 sobre os lugares que passamos. Fiquem com essa vista de Jaboatão dos Guararapes - PE.  
 
