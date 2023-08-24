@@ -20,9 +20,9 @@ theme = "paper"
   linkedin = 'lfernandoguedes'
   rss = true
 
-  avatar = 'xnando@gmail.com'
-  name = 'Guedes'
-  bio = 'Tech Lead and Software Engineer'
+  avatar = 'lfernandoguedes@gmail.com'
+  name = 'Tech Lead and Software Engineer'
+  bio = 'Personal and Tech stuff'
 # ------------------------------
 
 # needed to  render raw HTML (e.g. <sub>, <sup>, <kbd>, <mark>)
