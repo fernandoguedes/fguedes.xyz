@@ -1,57 +1,136 @@
-baseurl = "https://fguedes.xyz/"
-title = "~fguedes 🕱"
-theme = "ghostwriter"
-languageCode = "en-us"
-copyright = "Luís Fernando Guedes"
-googleAnalytics = "UA-133737351-1"
-disqusShortname = "fguedes"
+#baseurl = "https://fguedes.xyz/"
+#title = "Luís Fernando Guedes"
+#theme = "paper"
+#languageCode = "en-us"
+#copyright = "Luís Fernando Guedes"
+#googleAnalytics = "UA-133737351-1"
+#disqusShortname = "fguedes"
 
-[Author]
-    name = "Luís Fernando Guedes"
-    profile = "https://plus.google.com/u/0/+LuísFernandoGuedes"
+#[Author]
+    #name = "Luís Fernando Guedes"
+    #profile = "https://plus.google.com/u/0/+LuísFernandoGuedes"
 
-[Taxonomies]
-    tag = "tags"
+#[Taxonomies]
+    #tag = "tags"
 
-[Params]
-    intro = true
-    headline = "Luís Fernando Guedes"
-    description = "ARTESÃO DE SOFTWARE"
-    github = "https://github.com/fernandoguedes"
-    gitlab = "https://gitlab.com/fguedes"
-    linkedin = "https://linkedin.com/in/lfernandoguedes/"
-    stackoverflow = "https://pt.stackoverflow.com/users/11940/lu%c3%ads-fernando-guedes"
-    email = "lfernandoguedes@gmail.com"
-    opengraph = true
-    shareTwitter = true
-    shareFacebook = true
-    shareGooglePlus = true
-    shareLinkedIn = false
-    dateFormat = "Jan 2, 2006"
-    highlightJsUrl = ""
-    highlightJsLocalUrl = ""
-    readingTime = true
-    readingTimeText = "Estimated reading time:"
+#[Params]
+    #color = "linen"
+    #intro = true
+    #headline = "Luís Fernando Guedes"
+    #description = "ARTESÃO DE SOFTWARE"
+    #github = "fernandoguedes"
+    #linkedin = "lfernandoguedes"
+    #rss = true
+    #stackoverflow = "https://pt.stackoverflow.com/users/11940/lu%c3%ads-fernando-guedes"
+    #email = "lfernandoguedes@gmail.com"
+    #opengraph = true
+    #shareTwitter = true
+    #shareFacebook = true
+    #shareGooglePlus = true
+    #shareLinkedIn = false
+    #dateFormat = "Jan 2, 2006"
+    #highlightJsUrl = ""
+    #highlightJsLocalUrl = ""
+    #readingTime = true
+    #readingTimeText = "Estimated reading time:"
 
-[Permalinks]
-    post = "/:year/:month/:day/:filename/"
+#[Permalinks]
+    #post = "/:year/:month/:day/:filename/"
 
-#[[menu.main]]
-#    name = "Blog"
-#    url = "/"
-#    weight = 1
-#
-#[[menu.main]]
-#    name = "Projects"
-#    url = "/project/"
-#    weight = 2
-#
-#[[menu.main]]
-#    name = "Contact"
-#    url = "/page/contact/"
-#    weight = 3
-#
-#[[menu.main]]
-#    name = "About"
-#    url = "/page/about/"
-#    weight = 4
+##[[menu.main]]
+##    name = "Blog"
+##    url = "/"
+##    weight = 1
+##
+##[[menu.main]]
+##    name = "Projects"
+##    url = "/project/"
+##    weight = 2
+##
+##[[menu.main]]
+##    name = "Contact"
+##    url = "/page/contact/"
+##    weight = 3
+##
+##[[menu.main]]
+##    name = "About"
+##    url = "/page/about/"
+##    weight = 4
+
+
+baseURL = "https://fguedes.xyz/"
+title = "Luís Fernando Guedes"
+author = "Luís Fernando Guedes"
+copyright = "Copyright © 2008–2019, Steve Francia and the lee.so; all rights reserved."
+paginate = 3
+languageCode = "en"
+DefaultContentLanguage = "en"
+enableInlineShortcodes = true
+# prevent build failures when using Hugo's Instagram shortcode due to deprecated Instagram API.
+# See https://github.com/gohugoio/hugo/issues/7228#issuecomment-714490456
+ignoreErrors = ["error-remote-getjson"]
+
+# ------------------------------
+theme = "paper"
+
+[params]
+  color = 'linen'
+
+  github = 'fernandoguedes'
+  linkedin = 'nan.xiaobei'
+
+  avatar = 'xnando@gmail.com'
+  name = 'Guedes'
+  bio = 'Tech Lead and Software Engineer'
+# ------------------------------
+
+# needed to  render raw HTML (e.g. <sub>, <sup>, <kbd>, <mark>)
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+
+[menu]
+
+  [[menu.main]]
+    identifier = "about"
+    name = "About"
+    url = "/about/"
+    weight = 10
+  [[menu.main]]
+    identifier = "contact"
+    name = "Contact"
+    url = "/contact/"
+    weight = 10
+
+[taxonomies]
+category = "categories"
+tag = "tags"
+series = "series"
+
+[privacy]
+
+  [privacy.vimeo]
+    disabled = false
+    simple = true
+
+  [privacy.twitter]
+    disabled = false
+    enableDNT = true
+    simple = true
+
+  [privacy.instagram]
+    disabled = false
+    simple = true
+
+  [privacy.youtube]
+    disabled = false
+    privacyEnhanced = true
+
+[services]
+
+  [services.instagram]
+    disableInlineCSS = true
+
+  [services.twitter]
+    disableInlineCSS = true

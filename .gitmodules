@@ -2,3 +2,6 @@
 	path = public
 	url = https://$TOKEN@github.com/fernandoguedes/fernandoguedes.github.io.git
 	branch = master
+[submodule "themes/paper"]
+	path = themes/paper
+	url = https://github.com/nanxiaobei/hugo-paper
