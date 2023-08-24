@@ -14,10 +14,11 @@ ignoreErrors = ["error-remote-getjson"]
 theme = "paper"
 
 [params]
-  color = 'linen'
+  color = 'wheat'
 
   github = 'fernandoguedes'
   linkedin = 'lfernandoguedes'
+  rss = true
 
   avatar = 'xnando@gmail.com'
   name = 'Guedes'
