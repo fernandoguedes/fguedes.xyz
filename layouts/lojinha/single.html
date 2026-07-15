@@ -1,0 +1,169 @@
+<!doctype html>
+
+{{ $.Scratch.Delete "bg_color" }}
+{{ $.Scratch.Delete "social_list" }}
+{{ $.Scratch.Delete "avatar_url" }}
+
+{{ $colorMap := dict "linen" "#faf8f1" "wheat" "#f8f5d7" "gray" "#fbfbfb" "light" "#fff" }}
+{{ $.Scratch.Set "bg_color" (index $colorMap (site.Params.color | default "linen")) }}
+
+{{ range slice "twitter" "github" "instagram" "linkedin" "mastodon" "rss" }}
+  {{ if isset site.Params . }}
+    {{ $.Scratch.Add "social_list" (slice .) }}
+  {{ end }}
+{{ end }}
+
+{{ if site.Params.avatar }}
+  {{ if in site.Params.avatar "http" }}
+    {{ $.Scratch.Set "avatar_url" site.Params.avatar }}
+  {{ else }}
+    {{ $cdn := site.Params.gravatarCdn | default "https://www.gravatar.com/avatar/" }}
+    {{ $.Scratch.Set "avatar_url" (print $cdn (md5 site.Params.avatar) "?s=160&d=identicon") }}
+  {{ end }}
+{{ end }}
+
+<html class="not-ready lg:text-base" style="--bg: {{ $.Scratch.Get `bg_color` }}" lang="pt-BR">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title>Discos de vinil à venda | F. Guedes</title>
+    <meta name="description" content="Discos de vinil novos e usados à venda, com compra segura pelo Mercado Livre, OLX ou Shopee.">
+    <meta name="author" content="{{ site.Title }}">
+    <meta name="theme-color">
+    <link rel="canonical" href="https://fguedes.xyz/lojinha">
+
+    <meta property="og:title" content="Discos de vinil à venda">
+    <meta property="og:description" content="Discos novos e usados da minha coleção, disponíveis nos principais marketplaces.">
+    <meta property="og:url" content="https://fguedes.xyz/lojinha">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://fguedes.xyz/lojinha/imagens/capa-compartilhamento.jpg">
+    <meta property="og:image:alt" content="Seleção de discos de vinil à venda">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Discos de vinil à venda">
+    <meta name="twitter:description" content="Discos novos e usados da minha coleção, disponíveis nos principais marketplaces.">
+    <meta name="twitter:image" content="https://fguedes.xyz/lojinha/imagens/capa-compartilhamento.jpg">
+    <meta name="twitter:image:alt" content="Seleção de discos de vinil à venda">
+
+    {{ $main := resources.Get "main.css" }}
+    {{ $custom := resources.Get "custom.css" }}
+    {{ $shop := resources.Get "lojinha.css" }}
+    {{ $css := slice $main $custom $shop | resources.Concat "lojinha.css" | minify }}
+    <link rel="preload stylesheet" as="style" href="{{ $css.Permalink }}">
+
+    <link rel="preload" as="image" href="{{ `theme.png` | absURL }}">
+    <link rel="icon" href="{{ `favicon.ico` | absURL }}">
+    <link rel="apple-touch-icon" href="{{ `apple-touch-icon.png` | absURL }}">
+    {{ hugo.Generator }}
+
+    {{ $script := resources.Get "lojinha.js" | minify }}
+    <script defer src="{{ $script.Permalink }}"></script>
+  </head>
+  <body class="text-black duration-200 ease-out dark:text-white">
+    {{ partial "header.html" . }}
+
+    <main class="lojinha" id="conteudo-principal">
+      <header class="lojinha-cabecalho">
+        <p class="lojinha-selo">Coleção particular</p>
+        <h1>Discos de vinil à venda</h1>
+        <p>Discos novos e usados da minha coleção. Compra e envio realizados com segurança pelos marketplaces.</p>
+      </header>
+
+      <section class="produtos-grade" aria-label="Discos disponíveis">
+        {{ range $productIndex, $produto := site.Data.lojinha.produtos }}
+          {{ $id := $produto.sku | urlize }}
+          {{ $capa := index $produto.imagens 0 }}
+          <article class="produto-card" data-sku="{{ $produto.sku }}">
+            <button
+              class="produto-galeria-abrir"
+              type="button"
+              aria-label="Ver fotos de {{ $produto.artista }} — {{ $produto.album }}"
+              aria-haspopup="dialog"
+            >
+              <span class="imagem-placeholder" aria-hidden="true">
+                <span>Imagem indisponível</span>
+              </span>
+              <img
+                src="{{ printf `lojinha/imagens/%s` $capa | relURL }}"
+                alt="Capa do disco {{ $produto.album }}, de {{ $produto.artista }}"
+                width="800"
+                height="800"
+                {{ if eq $productIndex 0 }}loading="eager" fetchpriority="high"{{ else }}loading="lazy"{{ end }}
+                decoding="async"
+                data-product-image
+              >
+              {{ if gt (len $produto.imagens) 1 }}
+                <span class="produto-fotos-total" aria-hidden="true">{{ len $produto.imagens }} fotos</span>
+              {{ end }}
+            </button>
+
+            <div class="produto-conteudo">
+              <div class="produto-topo">
+                <span class="produto-condicao">{{ $produto.condicao }}</span>
+                <span class="produto-sku">{{ $produto.sku }}</span>
+              </div>
+              <p class="produto-artista">{{ $produto.artista }}</p>
+              <h2 id="{{ $id }}-titulo">{{ $produto.album }}</h2>
+              <p class="produto-descricao">{{ $produto.descricao }}</p>
+
+              <div class="produto-rodape">
+                {{ $reais := div $produto.precoCentavos 100 }}
+                {{ $centavos := mod $produto.precoCentavos 100 }}
+                <p class="produto-preco" aria-label="Preço: {{ printf `R$ %d,%02d` $reais $centavos }}">
+                  {{ printf "R$ %d,%02d" $reais $centavos }}
+                </p>
+
+                {{ if or $produto.links.mercadoLivre $produto.links.olx $produto.links.shopee }}
+                  <div class="produto-marketplaces" aria-label="Opções de compra">
+                    {{ with $produto.links.mercadoLivre }}
+                      <a href="{{ . }}" target="_blank" rel="noopener noreferrer">Comprar no Mercado Livre</a>
+                    {{ end }}
+                    {{ with $produto.links.olx }}
+                      <a href="{{ . }}" target="_blank" rel="noopener noreferrer">Comprar na OLX</a>
+                    {{ end }}
+                    {{ with $produto.links.shopee }}
+                      <a href="{{ . }}" target="_blank" rel="noopener noreferrer">Comprar na Shopee</a>
+                    {{ end }}
+                  </div>
+                {{ end }}
+              </div>
+            </div>
+
+            <div class="produto-galeria-dados" hidden>
+              {{ range $imagem := $produto.imagens }}
+                <span
+                  data-gallery-item
+                  data-src="{{ printf `lojinha/imagens/%s` $imagem | relURL }}"
+                  data-alt="Foto do disco {{ $produto.album }}, de {{ $produto.artista }}"
+                ></span>
+              {{ end }}
+            </div>
+          </article>
+        {{ end }}
+      </section>
+    </main>
+
+    <dialog class="galeria-modal" aria-labelledby="galeria-titulo">
+      <div class="galeria-painel">
+        <div class="galeria-barra">
+          <div>
+            <p class="galeria-titulo" id="galeria-titulo"></p>
+            <p class="galeria-contador" aria-live="polite"></p>
+          </div>
+          <button class="galeria-fechar" type="button" aria-label="Fechar galeria">&times;</button>
+        </div>
+
+        <div class="galeria-imagem-area">
+          <span class="galeria-placeholder" hidden>Imagem indisponível</span>
+          <img class="galeria-imagem" src="" alt="">
+          <button class="galeria-anterior" type="button" aria-label="Foto anterior">&#8592;</button>
+          <button class="galeria-proxima" type="button" aria-label="Próxima foto">&#8594;</button>
+        </div>
+      </div>
+    </dialog>
+
+    {{ partial "footer.html" . }}
+  </body>
+</html>

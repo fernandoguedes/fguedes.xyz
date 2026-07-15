@@ -1,0 +1,101 @@
+produtos:
+  - sku: LP-CAETANO-MEU-COCO
+    condicao: Novo
+    artista: Caetano Veloso
+    album: Meu Coco
+    descricao: Vinil verde translúcido, edição NOIZE Record Club, acompanhado de revista e encarte.
+    precoCentavos: 18000
+    imagens:
+      - IMG_9828.jpeg
+      - IMG_9829.jpeg
+    links:
+      mercadoLivre: ""
+      olx: ""
+      shopee: ""
+
+  - sku: LP-MARTINS-MARTINS
+    condicao: Novo
+    artista: Martins
+    album: Martins
+    descricao: Edição limitada Três Selos em vinil preto de 180g, com encarte exclusivo.
+    precoCentavos: 14000
+    imagens:
+      - IMG_9823.jpeg
+      - IMG_9824.jpeg
+    links:
+      mercadoLivre: ""
+      olx: ""
+      shopee: ""
+
+  - sku: LP-ALPHA-BLONDY-THE-PROPHETS
+    condicao: Usado
+    artista: Alpha Blondy and The Solar System
+    album: The Prophets
+    descricao: Prensagem brasileira da EMI, com capa e disco muito bem conservados.
+    precoCentavos: 9000
+    imagens:
+      - IMG_9825.jpeg
+      - IMG_9826.jpeg
+      - IMG_9827.jpeg
+    links:
+      mercadoLivre: ""
+      olx: ""
+      shopee: ""
+
+  - sku: LP-ORQUESTRA-CASINO-ASI-ES-MAMBO
+    condicao: Usado
+    artista: Orquestra Romantica Del Casino de Hawana
+    album: Asi es Mambo
+    descricao: Coletânea instrumental de mambo e ritmos caribenhos pelo selo Beverly.
+    precoCentavos: 4500
+    imagens:
+      - IMG_9820.jpeg
+      - IMG_9821.jpeg
+      - IMG_9822.jpeg
+    links:
+      mercadoLivre: ""
+      olx: ""
+      shopee: ""
+
+  - sku: LP-ELZA-SOARES-SENHORA-DA-TERRA
+    condicao: Novo
+    artista: Elza Soares
+    album: Senhora da Terra
+    descricao: Vinil rosa translúcido, edição NOIZE Record Club, com revista e encarte.
+    precoCentavos: 17000
+    imagens:
+      - IMG_9831.jpeg
+      - IMG_9832.jpeg
+      - IMG_9833.jpeg
+    links:
+      mercadoLivre: ""
+      olx: ""
+      shopee: ""
+
+  - sku: LP-ALAIDE-COSTA-MEUS-CALOS
+    condicao: Novo
+    artista: Alaíde Costa
+    album: O Que Meus Calos Dizem Sobre Mim
+    descricao: Edição limitada Três Selos em vinil preto, com encarte de letras e fotos.
+    precoCentavos: 13500
+    imagens:
+      - IMG_9836.jpeg
+      - IMG_9837.jpeg
+    links:
+      mercadoLivre: ""
+      olx: ""
+      shopee: ""
+
+  - sku: LP-JACKSON-CABRA-DA-PESTE
+    condicao: Novo
+    artista: Jackson do Pandeiro
+    album: O Cabra da Peste
+    descricao: Relançamento em vinil preto de 180g, edição limitada Três Selos.
+    precoCentavos: 13900
+    imagens:
+      - IMG_9834.jpeg
+      - IMG_9835.jpeg
+    links:
+      mercadoLivre: ""
+      olx: ""
+      shopee: ""
