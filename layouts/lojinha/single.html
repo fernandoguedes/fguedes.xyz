@@ -61,7 +61,7 @@
     {{ $script := resources.Get "lojinha.js" | minify }}
     <script defer src="{{ $script.Permalink }}"></script>
   </head>
-  <body class="text-black duration-200 ease-out dark:text-white">
+  <body class="lojinha-pagina text-black duration-200 ease-out dark:text-white">
     {{ partial "header.html" . }}
 
     <main class="lojinha" id="conteudo-principal">

@@ -392,6 +392,14 @@
 }
 
 @media (min-width: 64rem) {
+  body.lojinha-pagina > header,
+  body.lojinha-pagina > footer {
+    width: min(calc(100% - 3rem), 82rem);
+    max-width: 82rem;
+    padding-right: 0;
+    padding-left: 0;
+  }
+
   .lojinha {
     padding-top: 4rem;
   }
