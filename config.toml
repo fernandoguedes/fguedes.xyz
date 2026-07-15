@@ -34,14 +34,9 @@ theme = "paper"
 [menu]
 
   [[menu.main]]
-    identifier = "about"
-    name = "About"
-    url = "/about/"
-    weight = 10
-  [[menu.main]]
-    identifier = "contact"
-    name = "Contact"
-    url = "/contact/"
+    identifier = "sobre"
+    name = "Sobre"
+    url = "/sobre/"
     weight = 10
 
 [taxonomies]
