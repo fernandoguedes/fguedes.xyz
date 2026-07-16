@@ -52,7 +52,7 @@ series = "series"
 
   [privacy.twitter]
     disabled = false
-    enableDNT = truess
+    enableDNT = true
     simple = true
 
   [privacy.instagram]
