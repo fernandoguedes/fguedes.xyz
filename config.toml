@@ -35,7 +35,7 @@ theme = "paper"
 
   [[menu.main]]
     identifier = "sobre"
-    name = "Sobre"
+    name = "Sobre mim"
     url = "/sobre/"
     weight = 10
 
@@ -52,7 +52,7 @@ series = "series"
 
   [privacy.twitter]
     disabled = false
-    enableDNT = true
+    enableDNT = truess
     simple = true
 
   [privacy.instagram]
