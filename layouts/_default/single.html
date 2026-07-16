@@ -14,7 +14,18 @@
       {{ end }}
     </header>
 
-    <section class="article-body">{{ .Content }}</section>
+    {{ if eq .RelPermalink "/sobre/" }}
+      <div class="about-lead">
+        {{ with $.Scratch.Get "avatar_url" }}
+          <figure class="about-portrait">
+            <img src="{{ . }}" alt="Retrato de {{ site.Title }}" width="160" height="160" loading="lazy" decoding="async" />
+          </figure>
+        {{ end }}
+        <section class="article-body">{{ .Content }}</section>
+      </div>
+    {{ else }}
+      <section class="article-body">{{ .Content }}</section>
+    {{ end }}
 
     {{ if .Params.tags }}
       <footer class="article-tags" aria-label="Marcadores">

@@ -49,28 +49,31 @@
     }
   };
 
+  const openGallery = (card, trigger) => {
+    items = Array.from(card.querySelectorAll('[data-gallery-item]')).map((item) => ({
+      src: item.dataset.src,
+      alt: item.dataset.alt,
+    }));
+
+    if (!items.length) return;
+
+    currentTrigger = trigger;
+    currentIndex = 0;
+    title.textContent = `${card.querySelector('.produto-artista').textContent} — ${card.querySelector('h2').textContent}`;
+    renderImage();
+
+    if (typeof modal.showModal === 'function') {
+      modal.showModal();
+    } else {
+      modal.setAttribute('open', '');
+    }
+    document.body.classList.add('galeria-aberta');
+    closeButton.focus();
+  };
+
   document.querySelectorAll('.produto-galeria-abrir').forEach((trigger) => {
     trigger.addEventListener('click', () => {
-      const card = trigger.closest('.produto-card');
-      items = Array.from(card.querySelectorAll('[data-gallery-item]')).map((item) => ({
-        src: item.dataset.src,
-        alt: item.dataset.alt,
-      }));
-
-      if (!items.length) return;
-
-      currentTrigger = trigger;
-      currentIndex = 0;
-      title.textContent = `${card.querySelector('.produto-artista').textContent} — ${card.querySelector('h2').textContent}`;
-      renderImage();
-
-      if (typeof modal.showModal === 'function') {
-        modal.showModal();
-      } else {
-        modal.setAttribute('open', '');
-      }
-      document.body.classList.add('galeria-aberta');
-      closeButton.focus();
+      openGallery(trigger.closest('.produto-card'), trigger);
     });
   });
 

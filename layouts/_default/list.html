@@ -6,18 +6,15 @@
   {{ $paginator := .Paginate $pages }}
 
   {{ if .IsHome }}
-    {{ $avatarURL := $.Scratch.Get "avatar_url" }}
     <section class="home-intro" aria-labelledby="home-title">
       <div class="home-intro-copy">
         <p class="home-role">{{ site.Params.name }}</p>
         <h1 id="home-title">Escrevo sobre tecnologia e o que encontro pelo caminho.</h1>
         <p class="home-lede">{{ site.Params.intro }}</p>
       </div>
-      {{ with $avatarURL }}
-        <figure class="home-portrait">
-          <img src="{{ . }}" alt="Retrato de {{ site.Title }}" width="160" height="160" fetchpriority="high" />
-        </figure>
-      {{ end }}
+      <div class="home-visual" aria-hidden="true">
+        {{ partial "pixel-vinyl.html" . }}
+      </div>
     </section>
 
     <section class="writing-index" id="textos" aria-labelledby="writing-title">
@@ -33,7 +30,7 @@
               {{ with .Params.categories }}<span>{{ index . 0 }}</span>{{ end }}
             </div>
             <h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
-            <a class="writing-read" href="{{ .RelPermalink }}" aria-label="Ler {{ .Title }}">Ler →</a>
+            <span class="writing-read" aria-hidden="true">Ler →</span>
           </article>
         {{ end }}
       </div>
