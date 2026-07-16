@@ -317,16 +317,73 @@ button:disabled {
   will-change: transform;
 }
 
+/* Assembly timing: rows drop top->bottom, then the disc starts spinning.
+   --pv-rows: number of stacked "bricks"; --pv-step: stagger between them. */
+.pixel-vinyl {
+  --pv-rows: 28;
+  --pv-step: 34ms;
+  --pv-drop: 460ms;
+  /* Moment the last brick has clicked in — spin + tonearm begin after this. */
+  --pv-settled: calc(var(--pv-rows) * var(--pv-step) + var(--pv-drop));
+}
+
 .pixel-vinyl__disc {
   transform-box: fill-box;
   transform-origin: center;
-  animation: pv-spin 16s linear infinite;
+  /* Spin holds still until the disc has finished assembling. */
+  animation: pv-spin 16s linear var(--pv-settled) infinite;
   will-change: transform;
+}
+
+/* Each row is a Tetris "brick": it falls from just above its slot, fades in,
+   and overshoots slightly before settling — the click into place. */
+.pv-brick {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: pv-drop var(--pv-drop) var(--ease-out, cubic-bezier(0.16, 1, 0.3, 1)) both;
+  animation-delay: calc(var(--r) * var(--pv-step));
+}
+
+@keyframes pv-drop {
+  0% {
+    opacity: 0;
+    transform: translateY(-22px);
+  }
+  70% {
+    opacity: 1;
+    transform: translateY(2px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 @keyframes pv-spin {
   to {
     transform: rotate(360deg);
+  }
+}
+
+/* Tonearm swings down onto the record once the disc has settled. */
+.pixel-vinyl__tonearm {
+  transform-box: fill-box;
+  transform-origin: 90% 6%;
+  animation: pv-arm 620ms var(--ease-out, cubic-bezier(0.16, 1, 0.3, 1)) both;
+  animation-delay: var(--pv-settled);
+}
+
+@keyframes pv-arm {
+  0% {
+    opacity: 0;
+    transform: rotate(-15deg);
+  }
+  60% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+    transform: rotate(0);
   }
 }
 
@@ -1058,7 +1115,11 @@ button:disabled {
     animation-iteration-count: 1 !important;
   }
 
-  .pixel-vinyl__disc {
+  .pixel-vinyl__disc,
+  .pixel-vinyl__tonearm,
+  .pv-brick {
     animation: none !important;
+    opacity: 1 !important;
+    transform: none !important;
   }
 }

@@ -12,7 +12,9 @@ Antes disso, passei pelo Grupo Boticário, Zé Delivery e Resultados Digitais. N
 
 Também me interesso por liderança técnica e por criar ambientes em que pessoas, arquitetura e produto avancem na mesma direção. Gosto de entender o problema antes de escolher a ferramenta. Para mim, tecnologia não tem bala de prata.
 
-Mais recentemente venho explorando inteligência artificial aplicada à engenharia de software, principalmente ferramentas baseadas em LLMs e agentes. O uatiari, meu projeto experimental de código aberto, investiga como essas tecnologias podem apoiar revisões de código, decisões de arquitetura e ciclos de feedback mais rápidos e relevantes para quem desenvolve. Este site é meu espaço para registrar aprendizados, experiências e interesses. Além de software, escrevo sobre viagens, música, cinema, cultura e o que mais desperta curiosidade pelo caminho.
+Mais recentemente venho explorando inteligência artificial aplicada à engenharia de software, principalmente ferramentas baseadas em LLMs e agentes. O uatiari, meu projeto experimental de código aberto, investiga como essas tecnologias podem apoiar revisões de código, decisões de arquitetura e ciclos de feedback mais rápidos e relevantes para quem desenvolve. 
+
+Este site é meu espaço para registrar aprendizados, experiências e interesses. Além de software, escrevo sobre viagens, música, cinema, cultura e o que mais desperta curiosidade pelo caminho.
 
 Você também pode me encontrar no [GitHub](https://github.com/fernandoguedes) e no [LinkedIn](https://www.linkedin.com/in/lfernandoguedes/).
 
