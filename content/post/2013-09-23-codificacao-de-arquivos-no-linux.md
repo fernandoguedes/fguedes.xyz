@@ -2,7 +2,7 @@
 categories:
 - Desenvolvimento
 date: 2013-09-23T18:31:09Z
-published: true
+draft: false
 status: publish
 tags:
 - codificação

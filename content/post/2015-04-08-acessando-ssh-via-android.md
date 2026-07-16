@@ -3,7 +3,7 @@ categories:
 - Linux
 date: 2015-04-08T18:31:09Z
 feature-img: assets/2015-04-08/ssh.jpg
-published: true
+draft: false
 status: publish
 tags:
 - ssh

@@ -3,7 +3,7 @@ categories:
 - Filmes
 - Opinião
 date: 2018-01-10
-published: true
+draft: false
 status: publish
 tags:
 - offtopic

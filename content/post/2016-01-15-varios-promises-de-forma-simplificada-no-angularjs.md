@@ -3,7 +3,7 @@ categories:
 - Desenvolvimento
 date: 2016-01-15T18:31:09Z
 feature-img: assets/2016-01-15/promises.jpg
-published: true
+draft: false
 status: publish
 tags:
 - tip

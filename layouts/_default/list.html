@@ -1,0 +1,103 @@
+{{ define "main" }}
+  {{ $pages := union .RegularPages .Sections }}
+  {{ if .IsHome }}
+    {{ $pages = where site.RegularPages "Type" "in" site.Params.mainSections }}
+  {{ end }}
+  {{ $paginator := .Paginate $pages }}
+
+  {{ if .IsHome }}
+    {{ $avatarURL := $.Scratch.Get "avatar_url" }}
+    <section class="home-intro" aria-labelledby="home-title">
+      <div class="home-intro-copy">
+        <p class="home-role">{{ site.Params.name }}</p>
+        <h1 id="home-title">Escrevo sobre tecnologia e o que encontro pelo caminho.</h1>
+        <p class="home-lede">{{ site.Params.intro }}</p>
+      </div>
+      {{ with $avatarURL }}
+        <figure class="home-portrait">
+          <img src="{{ . }}" alt="Retrato de {{ site.Title }}" width="160" height="160" fetchpriority="high" />
+        </figure>
+      {{ end }}
+    </section>
+
+    <section class="writing-index" id="textos" aria-labelledby="writing-title">
+      <header class="section-heading">
+        <h2 id="writing-title">Textos recentes</h2>
+        <p>Engenharia de software, viagens, cinema e outros interesses.</p>
+      </header>
+      <div class="writing-list">
+        {{ range $paginator.Pages }}
+          <article class="writing-item{{ if gt .Weight 0 }} is-featured{{ end }}">
+            <div class="writing-meta">
+              <time datetime="{{ .Date.Format `2006-01-02` }}">{{ .Date | time.Format ":date_medium" }}</time>
+              {{ with .Params.categories }}<span>{{ index . 0 }}</span>{{ end }}
+            </div>
+            <h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
+            <a class="writing-read" href="{{ .RelPermalink }}" aria-label="Ler {{ .Title }}">Ler →</a>
+          </article>
+        {{ end }}
+      </div>
+      {{ if gt $paginator.TotalPages 1 }}
+        <nav class="pagination" aria-label="Paginação dos textos">
+          {{ if $paginator.HasPrev }}
+            <a href="{{ $paginator.Prev.URL }}">← Página anterior</a>
+          {{ end }}
+          <span>Página {{ $paginator.PageNumber }} de {{ $paginator.TotalPages }}</span>
+          {{ if $paginator.HasNext }}
+            <a href="{{ $paginator.Next.URL }}">Mais textos →</a>
+          {{ end }}
+        </nav>
+      {{ end }}
+    </section>
+
+    {{ with hugo.Data.lojinha.produtos }}
+      <section class="collection-preview" aria-labelledby="collection-title">
+        <div class="collection-preview-copy">
+          <p class="collection-kicker">Também por aqui</p>
+          <h2 id="collection-title">Alguns discos procurando uma nova casa.</h2>
+          <p>Uma pequena seleção da minha coleção, com compra pelos marketplaces.</p>
+          <p class="collection-link"><a href="{{ `lojinha/` | absURL }}">Visitar a Lojinha →</a></p>
+        </div>
+        <div class="collection-preview-grid">
+          {{ range first 2 . }}
+            {{ $cover := index .imagens 0 }}
+            <article class="collection-preview-item">
+              <a href="{{ `lojinha/` | absURL }}" aria-label="Ver {{ .album }}, de {{ .artista }}, na Lojinha">
+                <img src="{{ printf `lojinha/imagens/%s` $cover | relURL }}" alt="Capa de {{ .album }}, de {{ .artista }}" width="800" height="800" loading="lazy" decoding="async" />
+              </a>
+            </article>
+          {{ end }}
+        </div>
+      </section>
+    {{ end }}
+  {{ else }}
+    <header class="index-header">
+      <h1>{{ if eq .Type "tags" }}#{{ end }}{{ .Title }}</h1>
+      {{ with .Description }}<p>{{ . }}</p>{{ end }}
+    </header>
+    <div class="writing-list writing-list--archive">
+      {{ range $paginator.Pages }}
+        <article class="writing-item">
+          <div class="writing-meta">
+            <time datetime="{{ .Date.Format `2006-01-02` }}">{{ .Date | time.Format ":date_medium" }}</time>
+            {{ with .Params.categories }}<span>{{ index . 0 }}</span>{{ end }}
+          </div>
+          <h2><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
+          <a class="writing-read" href="{{ .RelPermalink }}" aria-label="Ler {{ .Title }}">Ler →</a>
+        </article>
+      {{ end }}
+    </div>
+  {{ end }}
+
+  {{ if and (not .IsHome) (gt $paginator.TotalPages 1) }}
+    <nav class="pagination" aria-label="Paginação">
+      {{ if $paginator.HasPrev }}
+        <a href="{{ $paginator.Prev.URL }}">← Página anterior</a>
+      {{ end }}
+      <span>Página {{ $paginator.PageNumber }} de {{ $paginator.TotalPages }}</span>
+      {{ if $paginator.HasNext }}
+        <a href="{{ $paginator.Next.URL }}">Próxima página →</a>
+      {{ end }}
+    </nav>
+  {{ end }}
+{{ end }}

@@ -1,0 +1,97 @@
+<header class="site-header">
+  <div class="mast-title-row">
+    {{ $url := .RelPermalink }}
+    <a class="mast-name" href="{{ `` | absURL }}"{{ if eq $url `/` }} aria-current="page"{{ end }}>{{ site.Title }}</a>
+
+    <nav class="mast-nav" id="site-navigation" aria-label="Navegação principal">
+      <ul>
+        {{ range site.Menus.main }}
+          {{ if ne .Identifier `inicio` }}
+            {{ $active := or (eq $url .URL) (and (ne .URL `/`) (hasPrefix $url .URL)) }}
+            <li>
+              <a href="{{ .URL }}"{{ if $active }} aria-current="page"{{ end }}>{{ .Name }}</a>
+            </li>
+          {{ end }}
+        {{ end }}
+      </ul>
+    </nav>
+
+    <div class="mast-actions">
+      <button class="theme-toggle" type="button" aria-label="Alternar tema" aria-pressed="false">
+        <span aria-hidden="true">◐</span>
+        <span class="visually-hidden">Tema</span>
+      </button>
+      <button class="menu-toggle" type="button" aria-controls="site-navigation" aria-expanded="false">
+        Menu
+      </button>
+    </div>
+  </div>
+</header>
+
+<script>
+  (() => {
+    const root = document.documentElement;
+    const menuButton = document.querySelector('.menu-toggle');
+    const navigation = document.querySelector('#site-navigation');
+    const themeButton = document.querySelector('.theme-toggle');
+    const themeMeta = document.querySelector('meta[name="theme-color"]');
+    const systemTheme = window.matchMedia('(prefers-color-scheme: dark)');
+
+    const storedTheme = localStorage.getItem('theme');
+    const legacyDark = localStorage.getItem('dark');
+    const initialDark = storedTheme
+      ? storedTheme === 'dark'
+      : legacyDark
+        ? legacyDark === 'true'
+        : systemTheme.matches;
+
+    const updateThemeMeta = () => {
+      if (!themeMeta) return;
+      themeMeta.setAttribute('content', getComputedStyle(document.body).backgroundColor);
+    };
+
+    const setTheme = (isDark, persist = true) => {
+      root.classList.toggle('dark', isDark);
+      themeButton.setAttribute('aria-pressed', String(isDark));
+      themeButton.setAttribute('aria-label', isDark ? 'Usar tema claro' : 'Usar tema escuro');
+      if (persist) {
+        localStorage.setItem('theme', isDark ? 'dark' : 'light');
+        localStorage.removeItem('dark');
+      }
+      requestAnimationFrame(updateThemeMeta);
+    };
+
+    const closeMenu = () => {
+      root.classList.remove('menu-open');
+      menuButton.setAttribute('aria-expanded', 'false');
+    };
+
+    setTheme(initialDark, Boolean(storedTheme || legacyDark));
+    root.classList.remove('not-ready');
+
+    menuButton.addEventListener('click', () => {
+      const open = !root.classList.contains('menu-open');
+      root.classList.toggle('menu-open', open);
+      menuButton.setAttribute('aria-expanded', String(open));
+    });
+
+    navigation.addEventListener('click', (event) => {
+      if (event.target.closest('a')) closeMenu();
+    });
+
+    themeButton.addEventListener('click', () => {
+      setTheme(!root.classList.contains('dark'));
+    });
+
+    systemTheme.addEventListener('change', (event) => {
+      if (!localStorage.getItem('theme')) setTheme(event.matches, false);
+    });
+
+    document.addEventListener('keydown', (event) => {
+      if (event.key === 'Escape' && root.classList.contains('menu-open')) {
+        closeMenu();
+        menuButton.focus();
+      }
+    });
+  })();
+</script>

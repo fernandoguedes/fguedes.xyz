@@ -4,7 +4,7 @@ categories:
 - Deploy Contínuo
 date: 2017-12-01
 feature-img: assets/2016-01-15/promises.jpg
-published: true
+draft: false
 status: publish
 tags:
 - Integração Contínua

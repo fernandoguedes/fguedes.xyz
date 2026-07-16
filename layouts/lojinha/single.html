@@ -1,11 +1,7 @@
 <!doctype html>
 
-{{ $.Scratch.Delete "bg_color" }}
 {{ $.Scratch.Delete "social_list" }}
 {{ $.Scratch.Delete "avatar_url" }}
-
-{{ $colorMap := dict "linen" "#faf8f1" "wheat" "#f8f5d7" "gray" "#fbfbfb" "light" "#fff" }}
-{{ $.Scratch.Set "bg_color" (index $colorMap (site.Params.color | default "linen")) }}
 
 {{ range slice "twitter" "github" "instagram" "linkedin" "mastodon" "rss" }}
   {{ if isset site.Params . }}
@@ -22,36 +18,40 @@
   {{ end }}
 {{ end }}
 
-<html class="not-ready lg:text-base" style="--bg: {{ $.Scratch.Get `bg_color` }}" lang="pt-BR">
+<html class="not-ready" lang="pt-BR">
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <title>Discos de vinil à venda | F. Guedes</title>
+    <title>Discos de vinil à venda | {{ site.Title }}</title>
     <meta name="description" content="Discos de vinil novos e usados à venda, com compra segura pelo Mercado Livre, OLX ou Shopee.">
     <meta name="author" content="{{ site.Title }}">
     <meta name="theme-color">
-    <link rel="canonical" href="https://fguedes.xyz/lojinha">
+    <link rel="canonical" href="{{ `lojinha/` | absURL }}">
 
     <meta property="og:title" content="Discos de vinil à venda">
     <meta property="og:description" content="Discos novos e usados da minha coleção, disponíveis nos principais marketplaces.">
-    <meta property="og:url" content="https://fguedes.xyz/lojinha">
+    <meta property="og:url" content="{{ `lojinha/` | absURL }}">
     <meta property="og:type" content="website">
-    <meta property="og:image" content="https://fguedes.xyz/lojinha/imagens/capa-compartilhamento.jpg">
+    <meta property="og:image" content="{{ `lojinha/imagens/IMG_9828.jpeg` | absURL }}">
     <meta property="og:image:alt" content="Seleção de discos de vinil à venda">
 
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Discos de vinil à venda">
     <meta name="twitter:description" content="Discos novos e usados da minha coleção, disponíveis nos principais marketplaces.">
-    <meta name="twitter:image" content="https://fguedes.xyz/lojinha/imagens/capa-compartilhamento.jpg">
+    <meta name="twitter:image" content="{{ `lojinha/imagens/IMG_9828.jpeg` | absURL }}">
     <meta name="twitter:image:alt" content="Seleção de discos de vinil à venda">
 
+    {{ $tokens := resources.FromString "tokens.css" (readFile "tokens.css") }}
     {{ $main := resources.Get "main.css" }}
     {{ $custom := resources.Get "custom.css" }}
     {{ $shop := resources.Get "lojinha.css" }}
-    {{ $css := slice $main $custom $shop | resources.Concat "lojinha.css" | minify }}
+    {{ $css := slice $tokens $main $custom $shop | resources.Concat "lojinha.css" | minify }}
     <link rel="preload stylesheet" as="style" href="{{ $css.Permalink }}">
+
+    <link rel="preload" href="{{ `fonts/newsreader-latin-400-700.woff2` | absURL }}" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="{{ `fonts/ibm-plex-sans-latin-400-600.woff2` | absURL }}" as="font" type="font/woff2" crossorigin>
 
     <link rel="preload" as="image" href="{{ `theme.png` | absURL }}">
     <link rel="icon" href="{{ `favicon.ico` | absURL }}">
@@ -61,18 +61,18 @@
     {{ $script := resources.Get "lojinha.js" | minify }}
     <script defer src="{{ $script.Permalink }}"></script>
   </head>
-  <body class="lojinha-pagina text-black duration-200 ease-out dark:text-white">
+  <body class="site-body page-kind-page page-type-lojinha lojinha-pagina">
     {{ partial "header.html" . }}
 
     <main class="lojinha" id="conteudo-principal">
       <header class="lojinha-cabecalho">
-        <p class="lojinha-selo">Coleção particular</p>
         <h1>Discos de vinil à venda</h1>
         <p>Discos novos e usados da minha coleção. Compra e envio realizados com segurança pelos marketplaces.</p>
+        <p class="lojinha-total">{{ len hugo.Data.lojinha.produtos }} discos da coleção</p>
       </header>
 
       <section class="produtos-grade" aria-label="Discos disponíveis">
-        {{ range $productIndex, $produto := site.Data.lojinha.produtos }}
+        {{ range $productIndex, $produto := hugo.Data.lojinha.produtos }}
           {{ $id := $produto.sku | urlize }}
           {{ $capa := index $produto.imagens 0 }}
           <article class="produto-card" data-sku="{{ $produto.sku }}">

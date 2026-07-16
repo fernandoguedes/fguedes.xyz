@@ -1,0 +1,14 @@
+{
+  "date": "2026-07-15",
+  "framework": "Hugo with Paper theme and Tailwind CSS 3",
+  "font_stack": "system sans and system mono before redesign",
+  "palette": "wheat/light theme palette with class-based dark mode before redesign",
+  "motion": "motion-cut; no animation library",
+  "spacing": "Tailwind utility scale",
+  "sources": [
+    "config.toml",
+    "themes/paper/package.json",
+    "themes/paper/assets/app.css",
+    "themes/paper/layouts/_default/baseof.html"
+  ]
+}

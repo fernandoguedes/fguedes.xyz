@@ -1,0 +1,48 @@
+{{ define "main" }}
+  <article class="content-article{{ if eq .Type `page` }} content-article--page{{ end }}">
+    <header class="article-header">
+      <h1>{{ .Title }}</h1>
+      {{ if ne .Type "page" }}
+        <div class="article-meta">
+          {{ if .Date }}
+            <time datetime="{{ .Date.Format `2006-01-02` }}">{{ .Date | time.Format ":date_medium" }}</time>
+          {{ end }}
+          {{ $singleAuthor := or .Params.Author site.Params.author site.Title }}
+          {{ with $singleAuthor }}<span>por {{ . }}</span>{{ end }}
+          {{ with .Params.categories }}<span>{{ delimit . " · " }}</span>{{ end }}
+        </div>
+      {{ end }}
+    </header>
+
+    <section class="article-body">{{ .Content }}</section>
+
+    {{ if .Params.tags }}
+      <footer class="article-tags" aria-label="Marcadores">
+        {{ range .Params.tags }}
+          {{ $href := print (absURL "tags/") (urlize .) }}
+          <a href="{{ $href }}">#{{ . }}</a>
+        {{ end }}
+      </footer>
+    {{ end }}
+
+    {{ if not site.Params.disablePostNavigation }}
+      {{ $pages := where site.RegularPages "Type" "in" site.Params.mainSections }}
+      {{ if and (gt (len $pages) 1) (in $pages .) }}
+        <nav class="post-navigation" aria-label="Outros textos">
+          {{ with $pages.Next . }}
+            <a href="{{ .RelPermalink }}">
+              <span>← Anterior</span>
+              <strong>{{ .Name }}</strong>
+            </a>
+          {{ end }}
+          {{ with $pages.Prev . }}
+            <a href="{{ .RelPermalink }}">
+              <span>Próximo →</span>
+              <strong>{{ .Name }}</strong>
+            </a>
+          {{ end }}
+        </nav>
+      {{ end }}
+    {{ end }}
+  </article>
+{{ end }}

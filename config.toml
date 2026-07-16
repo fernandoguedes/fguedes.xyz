@@ -1,10 +1,9 @@
 baseURL = "https://fguedes.xyz/"
 title = "Luís Fernando Guedes"
 author = "Luís Fernando Guedes"
-copyright = "Copyright © 2008–2019, Steve Francia and the lee.so; all rights reserved."
-paginate = 3
-languageCode = "en"
-DefaultContentLanguage = "en"
+copyright = "© 2026 Luís Fernando Guedes"
+locale = "pt-BR"
+DefaultContentLanguage = "pt"
 enableInlineShortcodes = true
 # prevent build failures when using Hugo's Instagram shortcode due to deprecated Instagram API.
 # See https://github.com/gohugoio/hugo/issues/7228#issuecomment-714490456
@@ -13,16 +12,23 @@ ignoreErrors = ["error-remote-getjson"]
 # ------------------------------
 theme = "paper"
 
+[pagination]
+  pagerSize = 6
+
 [params]
   color = 'wheat'
+  mainSections = ['post']
+  author = 'Luís Fernando Guedes'
+  description = 'Publicação pessoal sobre engenharia de software, liderança técnica, viagens e cultura.'
 
   github = 'fernandoguedes'
   linkedin = 'lfernandoguedes'
   rss = true
 
   avatar = 'lfernandoguedes@gmail.com'
-  name = 'Tech Lead and Software Engineer'
-  bio = 'Personal and Tech stuff'
+  name = 'Tech Lead e engenheiro de software'
+  bio = 'Tecnologia, liderança e aprendizados pelo caminho.'
+  intro = 'Construo produtos digitais, plataformas e integrações entre parceiros. Escrevo sobre engenharia de software, liderança técnica, viagens e cultura.'
 # ------------------------------
 
 # needed to  render raw HTML (e.g. <sub>, <sup>, <kbd>, <mark>)
@@ -31,13 +37,30 @@ theme = "paper"
     [markup.goldmark.renderer]
       unsafe = true
 
+[frontmatter]
+  date = ["date", ":filename"]
+  publishDate = ["publishDate", "pubdate"]
+  lastmod = ["lastmod", ":git", "date"]
+
 [menu]
+
+  [[menu.main]]
+    identifier = "inicio"
+    name = "Início"
+    url = "/"
+    weight = 5
 
   [[menu.main]]
     identifier = "sobre"
     name = "Sobre mim"
     url = "/sobre/"
     weight = 10
+
+  [[menu.main]]
+    identifier = "lojinha"
+    name = "Lojinha"
+    url = "/lojinha/"
+    weight = 20
 
 [taxonomies]
 category = "categories"
@@ -50,7 +73,7 @@ series = "series"
     disabled = false
     simple = true
 
-  [privacy.twitter]
+  [privacy.x]
     disabled = false
     enableDNT = true
     simple = true
@@ -68,5 +91,5 @@ series = "series"
   [services.instagram]
     disableInlineCSS = true
 
-  [services.twitter]
+  [services.x]
     disableInlineCSS = true

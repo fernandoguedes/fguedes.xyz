@@ -3,7 +3,7 @@ categories:
 - Relato
 date: 2015-11-10T18:31:09Z
 feature-img: assets/2015-11-10/lagoa_da_conceicao.jpg
-published: true
+draft: false
 status: publish
 tags:
 - blueticket

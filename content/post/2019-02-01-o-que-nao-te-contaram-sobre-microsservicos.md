@@ -3,7 +3,7 @@ categories:
 - Microsserviços
 - Opinião
 date: 2019-02-04
-published: true
+draft: false
 status: publish
 tags:
 - hype

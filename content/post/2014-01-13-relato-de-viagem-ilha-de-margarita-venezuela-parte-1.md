@@ -7,7 +7,7 @@ meta:
   _edit_last: "2"
   bwps_enable_ssl: ""
   dsq_thread_id: "2117386191"
-published: true
+draft: false
 status: publish
 tags:
 - avião

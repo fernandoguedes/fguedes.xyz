@@ -2,7 +2,7 @@
 categories:
 - Viagens
 date: 2019-04-20
-published: true
+draft: false
 status: publish
 tags:
 - cordel

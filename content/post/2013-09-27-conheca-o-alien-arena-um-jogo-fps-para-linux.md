@@ -9,7 +9,7 @@ meta:
   dsq_thread_id: "1802267423"
   socialize: 11,12,23,25,27
   socialize_text: ""
-published: true
+draft: false
 status: publish
 tags:
 - alien arena

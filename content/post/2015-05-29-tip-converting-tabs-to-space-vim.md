@@ -2,7 +2,7 @@
 categories:
 - Development
 date: 2015-05-29T18:31:09Z
-published: true
+draft: false
 status: publish
 tags:
 - linux

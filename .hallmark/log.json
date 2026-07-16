@@ -1,0 +1,26 @@
+[
+  {
+    "date": "2026-07-15",
+    "scope": "app",
+    "macrostructure": "Writing-First Split Studio / Long Document / Index-First / Catalogue",
+    "theme": "custom",
+    "theme_axes": "dark / roman-serif / chromatic-triad",
+    "vibe": "personal, curious, quietly colourful",
+    "enrichment": "existing portrait and photography",
+    "nav": "N9 Edge-Aligned Minimal",
+    "footer": "Ft4 Dense Colophon",
+    "brief": "Second-pass simplification with writing priority and restrained colour"
+  },
+  {
+    "date": "2026-07-15",
+    "scope": "app",
+    "macrostructure": "Split Studio / Long Document / Index-First / Catalogue",
+    "theme": "custom",
+    "theme_axes": "dark / roman-serif / warm",
+    "vibe": "editorial technical after dark",
+    "enrichment": "none",
+    "nav": "N6 Newspaper Masthead",
+    "footer": "Ft4 Dense Colophon",
+    "brief": "Professional publication and vinyl catalogue redesign"
+  }
+]
