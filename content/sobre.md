@@ -17,4 +17,4 @@ Este site é meu espaço para registrar aprendizados, experiências e interesses
 
 Você também pode me encontrar no [GitHub](https://github.com/fernandoguedes) e no [LinkedIn](https://www.linkedin.com/in/lfernandoguedes/).
 
-<i>Escrito por mim e revisado por IA.</string>
+<i>Escrito por mim e revisado por IA.</i>
