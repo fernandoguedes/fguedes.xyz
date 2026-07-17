@@ -58,6 +58,12 @@
     <link rel="apple-touch-icon" href="{{ `apple-touch-icon.png` | absURL }}">
     {{ hugo.Generator }}
 
+    {{ if or hugo.IsProduction (eq site.Params.env "production") }}
+    {{ with site.Params.cloudflareAnalyticsToken }}
+    <script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "{{ . }}"}'></script>
+    {{ end }}
+    {{ end }}
+
     {{ $script := resources.Get "lojinha.js" | minify }}
     <script defer src="{{ $script.Permalink }}"></script>
   </head>

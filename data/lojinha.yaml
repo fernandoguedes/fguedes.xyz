@@ -9,7 +9,7 @@ produtos:
       - IMG_9828.jpeg
       - IMG_9829.jpeg
     links:
-      mercadoLivre: ""
+      mercadoLivre: "https://www.mercadolivre.com.br/p/MLB7184879778"
       olx: ""
       shopee: ""
 
@@ -23,7 +23,7 @@ produtos:
       - IMG_9823.jpeg
       - IMG_9824.jpeg
     links:
-      mercadoLivre: ""
+      mercadoLivre: "https://www.mercadolivre.com.br/p/MLB4903971867"
       olx: ""
       shopee: ""
 
@@ -38,7 +38,7 @@ produtos:
       - IMG_9826.jpeg
       - IMG_9827.jpeg
     links:
-      mercadoLivre: ""
+      mercadoLivre: "https://www.mercadolivre.com.br/p/MLB7184977102"
       olx: ""
       shopee: ""
 
@@ -53,7 +53,7 @@ produtos:
       - IMG_9821.jpeg
       - IMG_9822.jpeg
     links:
-      mercadoLivre: ""
+      mercadoLivre: "https://www.mercadolivre.com.br/p/MLB4904011401"
       olx: ""
       shopee: ""
 
@@ -68,7 +68,7 @@ produtos:
       - IMG_9832.jpeg
       - IMG_9833.jpeg
     links:
-      mercadoLivre: ""
+      mercadoLivre: "https://www.mercadolivre.com.br/p/MLB7185000972"
       olx: ""
       shopee: ""
 
@@ -82,7 +82,7 @@ produtos:
       - IMG_9836.jpeg
       - IMG_9837.jpeg
     links:
-      mercadoLivre: ""
+      mercadoLivre: "https://www.mercadolivre.com.br/p/MLB4905956937"
       olx: ""
       shopee: ""
 
@@ -96,6 +96,94 @@ produtos:
       - IMG_9834.jpeg
       - IMG_9835.jpeg
     links:
-      mercadoLivre: ""
+      mercadoLivre: "https://www.mercadolivre.com.br/p/MLB4905874975"
+      olx: ""
+      shopee: ""
+
+  - sku: LP-NANA-ITAMAR-IMPECAVEL
+    condicao: Novo
+    artista: Naná Vasconcelos e Itamar Assumpção
+    album: Isso Vai Dar Repercussão
+    descricao: Vinil amarelo, edição limitada NOIZE Record Club, com revista. Estado impecável.
+    precoCentavos: 15000
+    imagens:
+      - IMG_9795.jpeg
+      - IMG_9797.jpeg
+    links:
+      mercadoLivre: "https://www.mercadolivre.com.br/p/MLB7170998754"
+      olx: ""
+      shopee: ""
+
+  - sku: LP-NANA-ITAMAR-DETALHE
+    condicao: Novo
+    artista: Naná Vasconcelos e Itamar Assumpção
+    album: Isso Vai Dar Repercussão
+    descricao: Vinil amarelo, edição limitada NOIZE Record Club. Detalhe na contracapa.
+    precoCentavos: 12500
+    imagens:
+      - IMG_9795.jpeg
+      - IMG_9796.jpeg
+      - IMG_9797.jpeg
+    links:
+      mercadoLivre: "https://www.mercadolivre.com.br/p/MLB4897532895"
+      olx: ""
+      shopee: ""
+
+  - sku: LP-TULIPA-RUIZ-HABILIDADES
+    condicao: Novo
+    artista: Tulipa Ruiz
+    album: Habilidades Extraordinárias
+    descricao: Vinil transparente, edição limitada NOIZE Record Club, com revista.
+    precoCentavos: 17000
+    imagens:
+      - IMG_9801.jpeg
+      - IMG_9802.jpeg
+    links:
+      mercadoLivre: "https://www.mercadolivre.com.br/p/MLB4897542973"
+      olx: ""
+      shopee: ""
+
+  - sku: LP-XENIA-FRANCA-EM-NOME-DA-ESTRELA
+    condicao: Novo
+    artista: Xênia França
+    album: Em Nome da Estrela
+    descricao: Vinil amarelo translúcido, edição limitada NOIZE Record Club, com revista. 3 unidades disponíveis.
+    precoCentavos: 11000
+    imagens:
+      - IMG_9804.jpeg
+      - IMG_9805.jpeg
+      - IMG_9806.jpeg
+    links:
+      mercadoLivre: "https://www.mercadolivre.com.br/p/MLB7174853056"
+      olx: ""
+      shopee: ""
+
+  - sku: LP-ELZA-SOARES-1974
+    condicao: Novo
+    artista: Elza Soares
+    album: Elza Soares 1974
+    descricao: Vinil laranja, reedição NOIZE Record Club (Tapecar), com revista.
+    precoCentavos: 16000
+    imagens:
+      - IMG_9807.jpeg
+      - IMG_9809.jpeg
+      - IMG_9810.jpeg
+    links:
+      mercadoLivre: "https://www.mercadolivre.com.br/p/MLB4897650583"
+      olx: ""
+      shopee: ""
+
+  - sku: LP-CEU-NOVELA
+    condicao: Novo
+    artista: Céu
+    album: Novela
+    descricao: Vinil azul escuro, edição limitada NOIZE Record Club, com revista.
+    precoCentavos: 16000
+    imagens:
+      - IMG_9811.jpeg
+      - IMG_9812.jpeg
+      - IMG_9813.jpeg
+    links:
+      mercadoLivre: "https://www.mercadolivre.com.br/p/MLB7174944720"
       olx: ""
       shopee: ""
