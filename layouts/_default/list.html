@@ -47,7 +47,7 @@
       {{ end }}
     </section>
 
-    {{ with site.Data.lojinha.produtos }}
+    {{ with hugo.Data.lojinha.produtos }}
       <section class="collection-preview" aria-labelledby="collection-title">
         <div class="collection-preview-copy">
           <p class="collection-kicker">Também por aqui</p>
@@ -80,7 +80,7 @@
             {{ with .Params.categories }}<span>{{ index . 0 }}</span>{{ end }}
           </div>
           <h2><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
-          <a class="writing-read" href="{{ .RelPermalink }}" aria-label="Ler {{ .Title }}">Ler →</a>
+          <span class="writing-read" aria-hidden="true">Ler →</span>
         </article>
       {{ end }}
     </div>

@@ -74,11 +74,11 @@
       <header class="lojinha-cabecalho">
         <h1>Discos de vinil à venda</h1>
         <p>Discos novos e usados da minha coleção. Compra e envio realizados com segurança pelos marketplaces.</p>
-        <p class="lojinha-total">{{ len site.Data.lojinha.produtos }} discos da coleção</p>
+        <p class="lojinha-total">{{ len hugo.Data.lojinha.produtos }} discos da coleção</p>
       </header>
 
       <section class="produtos-grade" aria-label="Discos disponíveis">
-        {{ range $productIndex, $produto := site.Data.lojinha.produtos }}
+        {{ range $productIndex, $produto := hugo.Data.lojinha.produtos }}
           {{ $id := $produto.sku | urlize }}
           {{ $capa := index $produto.imagens 0 }}
           <article class="produto-card" data-sku="{{ $produto.sku }}">
@@ -124,13 +124,13 @@
                 {{ if or $produto.links.mercadoLivre $produto.links.olx $produto.links.shopee }}
                   <div class="produto-marketplaces" aria-label="Opções de compra">
                     {{ with $produto.links.mercadoLivre }}
-                      <a href="{{ . }}" target="_blank" rel="noopener noreferrer">Comprar no Mercado Livre</a>
+                      <a href="{{ . }}" target="_blank" rel="noopener noreferrer">Comprar no Mercado Livre<span class="visually-hidden"> (abre em nova aba)</span></a>
                     {{ end }}
                     {{ with $produto.links.olx }}
-                      <a href="{{ . }}" target="_blank" rel="noopener noreferrer">Comprar na OLX</a>
+                      <a href="{{ . }}" target="_blank" rel="noopener noreferrer">Comprar na OLX<span class="visually-hidden"> (abre em nova aba)</span></a>
                     {{ end }}
                     {{ with $produto.links.shopee }}
-                      <a href="{{ . }}" target="_blank" rel="noopener noreferrer">Comprar na Shopee</a>
+                      <a href="{{ . }}" target="_blank" rel="noopener noreferrer">Comprar na Shopee<span class="visually-hidden"> (abre em nova aba)</span></a>
                     {{ end }}
                   </div>
                 {{ end }}

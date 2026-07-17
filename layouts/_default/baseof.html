@@ -27,7 +27,7 @@
 
 <html
   class="not-ready"
-  lang="{{ or site.Language.LanguageCode site.Language.Lang }}"
+  lang="{{ or site.Language.Locale site.Language.Lang }}"
 >
   {{ partial "head.html" . }}
   <body class="site-body page-kind-{{ .Kind }} page-type-{{ .Type }}{{ if .IsHome }} is-home{{ end }}">

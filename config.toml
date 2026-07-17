@@ -1,9 +1,8 @@
 baseURL = "https://fguedes.xyz/"
 title = "Luís Fernando Guedes"
 author = "Luís Fernando Guedes"
-copyright = "© 2026 Luís Fernando Guedes"
+copyright = "Conteúdo licenciado sob CC BY 4.0"
 locale = "pt-BR"
-languageCode = "pt-BR"
 DefaultContentLanguage = "pt"
 enableInlineShortcodes = true
 # prevent build failures when using Hugo's Instagram shortcode due to deprecated Instagram API.

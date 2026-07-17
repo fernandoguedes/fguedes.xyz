@@ -62,18 +62,28 @@
       requestAnimationFrame(updateThemeMeta);
     };
 
-    const closeMenu = () => {
+    const closeMenu = ({ restoreFocus = false } = {}) => {
       root.classList.remove('menu-open');
       menuButton.setAttribute('aria-expanded', 'false');
+      if (restoreFocus) menuButton.focus();
+    };
+
+    const openMenu = () => {
+      root.classList.add('menu-open');
+      menuButton.setAttribute('aria-expanded', 'true');
+      const firstLink = navigation.querySelector('a');
+      if (firstLink) firstLink.focus();
     };
 
     setTheme(initialDark, Boolean(storedTheme || legacyDark));
     root.classList.remove('not-ready');
 
     menuButton.addEventListener('click', () => {
-      const open = !root.classList.contains('menu-open');
-      root.classList.toggle('menu-open', open);
-      menuButton.setAttribute('aria-expanded', String(open));
+      if (root.classList.contains('menu-open')) {
+        closeMenu({ restoreFocus: true });
+      } else {
+        openMenu();
+      }
     });
 
     navigation.addEventListener('click', (event) => {
@@ -90,8 +100,7 @@
 
     document.addEventListener('keydown', (event) => {
       if (event.key === 'Escape' && root.classList.contains('menu-open')) {
-        closeMenu();
-        menuButton.focus();
+        closeMenu({ restoreFocus: true });
       }
     });
   })();

@@ -31,7 +31,7 @@ Abra o aplicativo
 *Tip: clique na imagem para visualizá-la inteira*
 
 <div class="post-image" style="overflow: hidden; width: 540px; height: 340px; text-align: center;">
-    <img class="post-image" src="/assets/2015-04-08/ss_1.png" />
+    <img class="post-image" src="/assets/2015-04-08/ss_1.png" alt="Tela inicial do app SSH Client no Android" />
 </div>
 
 
@@ -39,19 +39,19 @@ Clique no menu, gerar.
 
 
 <div style="overflow: hidden; width: 540px; height: 340px; text-align: center;">
-    <img class="post-image" src="/assets/2015-04-08/ss_2.png" />
+    <img class="post-image" src="/assets/2015-04-08/ss_2.png" alt="Menu do SSH Client com a opção de gerar chave destacada" />
 </div>
 <br />
 Siga os passos, escolha o nome, a forma de criptografia e senha, se desejar.
 
 <div style="overflow: hidden; width: 540px; height: 340px; text-align: center;">
-    <img class="post-image" src="/assets/2015-04-08/ss_3.png" />
+    <img class="post-image" src="/assets/2015-04-08/ss_3.png" alt="Formulário de geração de chave SSH com nome, algoritmo e senha" />
 </div>
 <br />
 Clique no menu novamente, e copie a chave pública.
 
 <div style="overflow: hidden; width: 540px; height: 340px; text-align: center;">
-    <img class="post-image" src="/assets/2015-04-08/ss_4.png" />
+    <img class="post-image" src="/assets/2015-04-08/ss_4.png" alt="Tela do SSH Client mostrando a chave pública gerada para copiar" />
 </div>
 <br />
 
@@ -62,7 +62,7 @@ Para conseguir acessar, em definitivo, você precisa adicionar o acesso à chave
 Com acesso root, adicione a chave gerada no Android ao arquivo que se encontra em ~/.ssh/authorized_keys, feito isso, o acesso está liberado, enjoy!
 
 <div style="overflow: hidden; width: 540px; height: 340px; text-align: center;">
-    <img class="post-image" src="/assets/2015-04-08/ss_5.png" />
+    <img class="post-image" src="/assets/2015-04-08/ss_5.png" alt="Terminal do Android com sessão SSH aberta no servidor" />
 </div>
 
 <div id="image-modal"></div>
@@ -73,8 +73,9 @@ Com acesso root, adicione a chave gerada no Android ao arquivo que se encontra e
 <script>
     $('.post-image').on('click', function() {
         var src = $(this).attr('src');
-	var img = '<img src="{src}"/>'.replace('{src}', src);
-	$('#image-modal').html(img);
+        var alt = $(this).attr('alt') || '';
+	var img = $('<img>').attr({ src: src, alt: alt });
+	$('#image-modal').empty().append(img);
 	$('#image-modal').dialog({
 	    modal: true
 	});

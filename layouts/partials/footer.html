@@ -1,10 +1,13 @@
 <footer class="site-footer">
   <p class="footer-colophon">
     {{ site.Title }} escreve sobre engenharia de software, liderança, viagens e cultura.
-    Feito com <a href="https://gohugo.io/" rel="noopener" target="_blank">Hugo</a> e publicado em {{ now.Year }}.
-    {{ with site.Params.github }}<a href="https://github.com/{{ . }}" rel="me noopener" target="_blank">GitHub</a>.{{ end }}
-    {{ with site.Params.linkedin }}<a href="https://linkedin.com/in/{{ . }}" rel="me noopener" target="_blank">LinkedIn</a>.{{ end }}
+    Feito com <a href="https://gohugo.io/" rel="noopener" target="_blank">Hugo<span class="visually-hidden"> (abre em nova aba)</span></a> e publicado em {{ now.Year }}.
+    {{ with site.Params.github }}<a href="https://github.com/{{ . }}" rel="me noopener" target="_blank">GitHub<span class="visually-hidden"> (abre em nova aba)</span></a>.{{ end }}
+    {{ with site.Params.linkedin }}<a href="https://linkedin.com/in/{{ . }}" rel="me noopener" target="_blank">LinkedIn<span class="visually-hidden"> (abre em nova aba)</span></a>.{{ end }}
     {{ if site.Params.rss }}<a href="{{ `index.xml` | absURL }}" rel="alternate">RSS</a>.{{ end }}
   </p>
-  <p class="footer-mark">© {{ now.Year }} {{ site.Title }}</p>
+  <div class="footer-aside">
+    <p class="footer-mark"><a href="https://creativecommons.org/licenses/by/4.0/deed.pt" rel="license noopener" target="_blank">CC BY 4.0<span class="visually-hidden"> (abre em nova aba)</span></a></p>
+    <p class="footer-a11y">Interface alinhada a WCAG 2.2 AA.</p>
+  </div>
 </footer>
