@@ -1,0 +1,10 @@
+{{- $dest := urls.Parse .Destination -}}
+{{- $home := urls.Parse site.BaseURL -}}
+{{- $external := and $dest.IsAbs (ne $dest.Host $home.Host) -}}
+{{- $newTab := not (strings.HasPrefix .Destination "#") -}}
+<a href="{{ .Destination | safeURL }}"
+  {{- with .Title }} title="{{ . }}"{{ end }}
+  {{- if $newTab }} target="_blank" rel="noopener"{{ end }}>
+  {{- if $external }}<span class="link-label">{{ .Text | safeHTML }}</span><svg class="external-link-icon" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path fill="currentColor" d="M9.3 3.2v1.2h2.1L7.1 8.7l.8.8 4.3-4.3v2.1h1.2V3.2H9.3ZM6.2 4.4H3.5v8h8V9.7h-1.2v1.5H4.7V5.6h1.5V4.4Z"/></svg>{{- else }}{{ .Text | safeHTML }}{{ end -}}
+  {{- if $newTab }}<span class="visually-hidden"> (abre em nova aba)</span>{{ end -}}
+</a>

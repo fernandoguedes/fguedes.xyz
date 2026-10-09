@@ -1,0 +1,22 @@
+time,cores_oficiais,cor_principal,observacao
+Atlético Mineiro,preto|branco,preto,
+Palmeiras,verde|branco,verde,
+Vasco da Gama,preto|branco,preto,
+Internacional,vermelho|branco,vermelho,
+São Paulo,vermelho|branco|preto,vermelho,tricolor; primeira cor não branca listada
+Guarani,verde|branco,verde,
+Flamengo,vermelho|preto,vermelho,
+Grêmio,azul|preto|branco,azul,
+Fluminense,vermelho|branco|verde,vermelho,grená/encarnado reduzido a vermelho
+Coritiba,verde|branco,verde,
+Sport,preto|vermelho,preto,artigo lista preto antes de encarnado
+Bahia,azul|branco|vermelho,azul,
+Corinthians,branco|preto,preto,branco ignorado como cor principal
+Botafogo,preto|branco,preto,
+Athletico Paranaense,vermelho|preto,vermelho,
+Santos,branco|preto,preto,branco ignorado como cor principal
+Cruzeiro,azul|branco,azul,extrator devolveu cores do Palestra Itália; corrigido pelo uniforme atual
+Criciúma,amarelo|preto|branco,amarelo,
+Juventude,verde|branco,verde,
+Santo André,azul|branco,azul,azul e branco desde 1975 (antes verde e amarelo)
+Paulista,vermelho|preto|branco,vermelho,
